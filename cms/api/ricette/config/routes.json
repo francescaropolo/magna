@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ricettes",
+      "handler": "ricette.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ricettes/count",
+      "handler": "ricette.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ricettes/:id",
+      "handler": "ricette.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ricettes",
+      "handler": "ricette.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ricettes/:id",
+      "handler": "ricette.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ricettes/:id",
+      "handler": "ricette.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
