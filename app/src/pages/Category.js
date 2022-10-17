@@ -24,9 +24,10 @@ const Category = props => {
     }, [id])
 
     const getData = () => {
-        fetch(`${process.env.REACT_APP_API_BASE_PATH}/tags/${id}`, {
+        fetch(`${process.env.REACT_APP_API_BASE_PATH}/measurement-units`, {
             method: 'GET',
             headers: {
+                Authorization: `Bearer ${process.env.API_TOKEN_SALT}`,
                 'Content-Type': 'application/json',
             },
         })
@@ -39,6 +40,21 @@ const Category = props => {
             .catch((error) => {
                 console.error(error);
             });
+        // fetch(`${process.env.REACT_APP_API_BASE_PATH}/tags/${id}`, {
+        //     method: 'GET',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        // })
+        //     .then(response => {
+        //         return response.json()
+        //     })
+        //     .then(data => {
+        //         setCategory(data)
+        //     })
+        //     .catch((error) => {
+        //         console.error(error);
+        //     });
     }
     return (
         <>
